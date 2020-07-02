@@ -15,7 +15,7 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-Data provided by Motivate. 
+Data provided by Motivate. https://www.motivateco.com/ 
 
 Data wrangling and edited files provided by Udacity's Introduction to Python course. http://udacity.com/
 
