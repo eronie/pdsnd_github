@@ -15,7 +15,7 @@ def resetScreen():
     """Clears the screen."""
 
     system('cls')
-    print('\n\n\n\n')
+    print('\n\n\n')
 
 def userChoiceMenuList(question, itemList, clrScreen):
     """Given a question and options, creates a list of options to choose from.
