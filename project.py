@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 from os import system, name
 
+# Created using Python 3.8.3, NumPy 1.19.0, Pandas 1.0.5
+
+
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
