@@ -18,7 +18,7 @@ def resetScreen():
     print('\n\n\n')
 
 def userChoiceMenuList(question, itemList, clrScreen):
-    """Given a question and options, creates a list of options to choose from.
+    """Given a question and options, creates a vertical list of options to choose from.
     Can choose to clear the screen before using or not, depending on use case."""
 
     numListItems = len(itemList) -1
