@@ -123,7 +123,7 @@ def load_data(city, interval, monthChoice, dayChoice):
     return df
 
 def travelStats(df, city, monthChoice, dayChoice, interval):
-    """Displays travel statistics."""
+    """Displays travel statistics using user information from the getCity and getInterval functions."""
 
     resetScreen()
     print('You are viewing Bikeshare data on {} sorted by {}.\n'.format(city, interval[1]))
