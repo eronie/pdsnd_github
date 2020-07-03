@@ -49,7 +49,6 @@ def userChoiceMenuList(question, itemList, clrScreen):
 
 def proceedBool(question):
     """Given a question, creates a yes or no option."""
-    proceed = False
     userChoice  = ''
     invalidInput = False
     options = ('y', 'n')
@@ -60,6 +59,7 @@ def proceedBool(question):
         invalidInput = True
         if userChoice == 'y':
             proceed = True
+        else: proceed = False
     return proceed
 
 def getCity():
