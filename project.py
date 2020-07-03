@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 from os import system, name
 
+# Created using Python 3.8.3, NumPy 1.19.0, Pandas 1.0.5
+
+
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
@@ -12,10 +15,10 @@ def resetScreen():
     """Clears the screen."""
 
     system('cls')
-    print('\n\n\n\n')
+    print('\n\n\n')
 
 def userChoiceMenuList(question, itemList, clrScreen):
-    """Given a question and options, creates a list of options to choose from.
+    """Given a question and options, creates a vertical list of options to choose from.
     Can choose to clear the screen before using or not, depending on use case."""
 
     numListItems = len(itemList) -1
@@ -46,7 +49,6 @@ def userChoiceMenuList(question, itemList, clrScreen):
 
 def proceedBool(question):
     """Given a question, creates a yes or no option."""
-    proceed = False
     userChoice  = ''
     invalidInput = False
     options = ('y', 'n')
@@ -57,6 +59,7 @@ def proceedBool(question):
         invalidInput = True
         if userChoice == 'y':
             proceed = True
+        else: proceed = False
     return proceed
 
 def getCity():
@@ -71,7 +74,8 @@ def getCity():
     return city
 
 def getInterval():
-    """Allows the user to choose sorting method and then narrow the sorting method for the data."""
+    """Allows user to choose to sort by Month, Day, or All data. If user chooses month, 
+    they will choose the specific month. If user chooses day, they will choose the day of the week."""
 
     intervals = ('Month', 'Day', 'All')
     question = 'You can explore the data by month, by day of the week or all data.\nWhich would you prefer?'
@@ -119,7 +123,7 @@ def load_data(city, interval, monthChoice, dayChoice):
     return df
 
 def travelStats(df, city, monthChoice, dayChoice, interval):
-    """Displays travel statistics."""
+    """Displays travel statistics using user information from the getCity and getInterval functions."""
 
     resetScreen()
     print('You are viewing Bikeshare data on {} sorted by {}.\n'.format(city, interval[1]))
