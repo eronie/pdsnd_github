@@ -74,7 +74,8 @@ def getCity():
     return city
 
 def getInterval():
-    """Allows the user to choose sorting method and then narrow the sorting method for the data."""
+    """Allows user to choose to sort by Month, Day, or All data. If user chooses month, 
+    they will choose the specific month. If user chooses day, they will choose the day of the week."""
 
     intervals = ('Month', 'Day', 'All')
     question = 'You can explore the data by month, by day of the week or all data.\nWhich would you prefer?'
